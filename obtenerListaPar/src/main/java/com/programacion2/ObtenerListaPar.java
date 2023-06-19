@@ -13,7 +13,7 @@ public class ObtenerListaPar {
     public void obtenerListaParR(ArrayList<Integer> miLista) throws MiExcepcion {
         if (!miLista.isEmpty()) {
             elemento = miLista.get(0);
-            if (elemento > 0) {
+            if (elemento >=2 ) {
                 if (elemento % 2 == 0) {
                     listaTerminada.add(elemento);
                     miLista.remove(0);
@@ -22,7 +22,7 @@ public class ObtenerListaPar {
                     miLista.remove(0);
                     obtenerListaParR(miLista);
                 }
-            } else if (elemento < 0) {
+            } else if (elemento < 2) {
                 throw new MiExcepcion();
             }
         }

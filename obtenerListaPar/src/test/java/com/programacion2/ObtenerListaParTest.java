@@ -13,27 +13,12 @@ public class ObtenerListaParTest {
     @Test
     void obtenerListaParRTest() throws MiExcepcion{
         ArrayList<Integer> listaInicial = new ArrayList<Integer>();
-        listaInicial.add(1);
         listaInicial.add(2);
         listaInicial.add(3);
         objeto.obtenerListaParR(listaInicial);
 
         ArrayList<Integer> listaEsperada = new ArrayList<Integer>();
         listaEsperada.add(2);
-
-        assertEquals(listaEsperada, objeto.listaTerminada);
-    }
-
-
-    @Test
-    void obtenerListaParRTest1() throws MiExcepcion {
-        ArrayList<Integer> listaInicial = new ArrayList<Integer>();
-        listaInicial.add(1);
-        listaInicial.add(3);
-        listaInicial.add(5);
-        objeto.obtenerListaParR(listaInicial);
-
-        ArrayList<Integer> listaEsperada = new ArrayList<Integer>();
 
         assertEquals(listaEsperada, objeto.listaTerminada);
     }
@@ -62,6 +47,21 @@ public class ObtenerListaParTest {
         listaEsperada.add(2);
         listaEsperada.add(4);
         listaEsperada.add(6);
+
+        assertEquals(listaEsperada, objeto.listaTerminada);
+    }
+
+    @Test
+    void obtenerListaParRTest4() throws MiExcepcion{
+        ArrayList<Integer> listaInicial = new ArrayList<Integer>();
+        listaInicial.add(2);
+        listaInicial.add(2);
+        listaInicial.add(3);
+        objeto.obtenerListaParR(listaInicial);
+
+        ArrayList<Integer> listaEsperada = new ArrayList<Integer>();
+        listaEsperada.add(2);
+        listaEsperada.add(2);
 
         assertEquals(listaEsperada, objeto.listaTerminada);
     }
