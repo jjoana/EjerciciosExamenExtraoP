@@ -64,4 +64,28 @@ public class CambioNumeroTest {
         assertEquals(17, objeto.resultado);
     }
 
+    @Test
+    void binarioDecimalLAmbdaTest1() {
+        objeto.cambioNumeroLambda(12);
+        assertEquals(1100, objeto.resultado);
+    }
+
+    @Test
+    void binarioDecimalLAmbdaTest2() {
+        objeto.cambioNumeroLambda(0);
+        assertEquals(0, objeto.resultado);
+    }
+
+    @Test
+    void binarioDecimalLAmbdaTest3() {
+        objeto.cambioNumeroLambda(1);
+        assertEquals(1, objeto.resultado);
+    }
+
+    @Test
+    void binarioDecimalLAmbdaTest4() {
+        objeto.cambioNumeroLambda(17);
+        assertEquals(10001, objeto.resultado);
+    }
+
 }
