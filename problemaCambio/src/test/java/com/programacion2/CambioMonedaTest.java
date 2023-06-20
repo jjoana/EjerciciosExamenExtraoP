@@ -5,6 +5,9 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.Comparator;
 
 public class CambioMonedaTest {
 
@@ -104,22 +107,24 @@ public class CambioMonedaTest {
     void cambioLambdaTest1() {
 
         ArrayList<Integer> miLista = new ArrayList<Integer>();
-        miLista.add(3);
         miLista.add(2);
+        miLista.add(3);
         miLista.add(1);
-        
+        Collections.sort(miLista, Comparator.reverseOrder());
         assertEquals(2, CambioMoneda.cambioLambda(5, miLista));
+        
     }
 
     @Test
     void cambioLambdaTest2() {
 
         ArrayList<Integer> miLista = new ArrayList<Integer>();
-        miLista.add(3);
         miLista.add(2);
+        miLista.add(3);
         miLista.add(1);
-        
+
         assertEquals(0, CambioMoneda.cambioLambda(0, miLista));
+        Collections.sort(miLista, Comparator.reverseOrder());
     }
 
     @Test

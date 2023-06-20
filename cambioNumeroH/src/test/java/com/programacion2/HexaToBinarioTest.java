@@ -29,4 +29,10 @@ public class HexaToBinarioTest {
         objeto.hexadecimalToBinarioI("1AB3");
         assertEquals(6835, objeto.resultado);
     }
+
+    @Test
+    void DecimalToBinario(){
+        objeto.DecimalToBinarioR(19);
+        assertEquals(10011, objeto.resultado);
+    }
 }
