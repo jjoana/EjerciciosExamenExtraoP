@@ -12,9 +12,7 @@ public class Persona implements Comparable<Persona> {
 
     @Override
     public int compareTo(Persona o) {
-
         return nombre.compareTo(o.nombre);
-
     }
 
     public String toString(){

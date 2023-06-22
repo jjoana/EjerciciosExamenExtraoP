@@ -9,6 +9,7 @@ import java.util.TreeSet;
  */
 public class App {
     public static void main(String[] args) {
+        /* 
 
         TreeSet<Persona> miTreeSet = new TreeSet<Persona>();
         Persona objeto = new Persona("Jesus", 20);
@@ -21,7 +22,25 @@ public class App {
         for(Persona persona: miTreeSet){
             System.out.println(persona);
         }
+        */
 
+        TreeSet<Integer> miTreeSet = new TreeSet<>();
+        miTreeSet.add(2);
+        miTreeSet.add(1);
+        miTreeSet.add(3);
+
+        for(Integer lista: miTreeSet){
+            System.out.println(lista);
+        }
+
+        ArrayList<Integer> miArray = new ArrayList<>();
+        miArray.add(2);
+        miArray.add(1);
+        miArray.add(3);
+
+        for(Integer miLista : miArray){
+            System.out.println(miLista);
+        }
 
     }
 }
