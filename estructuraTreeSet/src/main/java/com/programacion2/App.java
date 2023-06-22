@@ -39,8 +39,9 @@ public class App {
         miArray.add(3);
 
         for(Integer miLista : miArray){
-            System.out.println(miLista);
+            System.out.println(miLista);   
         }
+
 
     }
 }
