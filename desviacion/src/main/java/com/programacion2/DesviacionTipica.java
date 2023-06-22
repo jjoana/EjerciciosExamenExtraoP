@@ -6,6 +6,7 @@ import java.util.List;
 public class DesviacionTipica {
 
 
+
     public double mediaAritmeticaR(int tamano, List<Double> miLista) {
         double valor = 0;
 

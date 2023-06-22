@@ -17,7 +17,6 @@ public class HexaToBinario {
     }
 
     public void DecimalToBinarioR(int elemento){
-
         if (elemento >= 2) {
             resultado += (elemento % 2) * Math.pow(10, exponente++);
             elemento = elemento / 2;
@@ -26,6 +25,6 @@ public class HexaToBinario {
         } else if(elemento < 2){
             resultado += (elemento) * Math.pow(10, exponente);
         }
-        
     }
 }
+ 

@@ -62,4 +62,29 @@ public class SumaElementosParesTest {
         assertEquals(0, objeto.resultado);
     }
 
+    @Test
+    void SumaParesLambdaTest() {
+        ArrayList<Integer> miLista = new ArrayList<Integer>();
+        miLista.add(3);
+        miLista.add(2);
+        miLista.add(1);
+        objeto.sumaLambda(miLista);
+        assertEquals(6, objeto.resultado);
+    }
+
+    @Test
+    void SumaParesLambdaTest1() {
+        ArrayList<Integer> miLista = new ArrayList<Integer>();
+        miLista.add(1);
+        objeto.sumaLambda(miLista);
+        assertEquals(1, objeto.resultado);
+    }
+
+    @Test
+    void SumaParesLambdaTest2() {
+        ArrayList<Integer> miLista = new ArrayList<Integer>();
+        objeto.sumaLambda(miLista);
+        assertEquals(0, objeto.resultado);
+    }
+
 }

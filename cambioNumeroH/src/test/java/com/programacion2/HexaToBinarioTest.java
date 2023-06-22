@@ -31,6 +31,13 @@ public class HexaToBinarioTest {
     }
 
     @Test
+    void HexaToDeciTest3(){
+        objeto.hexadecimalToBinarioI("FE05");
+        assertEquals(65029, objeto.resultado);
+    }
+    
+
+    @Test
     void DecimalToBinario(){
         objeto.DecimalToBinarioR(19);
         assertEquals(10011, objeto.resultado);

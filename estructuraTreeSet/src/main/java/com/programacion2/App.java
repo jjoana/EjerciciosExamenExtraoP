@@ -41,7 +41,5 @@ public class App {
         for(Integer miLista : miArray){
             System.out.println(miLista);   
         }
-
-
     }
 }
