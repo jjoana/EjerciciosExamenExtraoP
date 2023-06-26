@@ -11,81 +11,46 @@ public class CambioNumeroTest {
 
     @Test
     void cambioNumeroTest1() {
-        objeto.cambioNumero(12);
-        assertEquals(1100, objeto.resultado);
+        assertEquals(1100, objeto.cambioNumeroI(12));
     }
 
     @Test
     void cambioNumeroTest2() {
-        objeto.cambioNumero(0);
-        assertEquals(0, objeto.resultado);
+        assertEquals(101000, objeto.cambioNumeroI(40));
     }
 
     @Test
     void cambioNumeroTest3() {
-        objeto.cambioNumero(1);
-        assertEquals(1, objeto.resultado);
+        assertEquals(0, objeto.cambioNumeroI(0));
     }
 
     @Test
     void cambioNumeroTest4() {
-        objeto.cambioNumero(17);
-        assertEquals(10001, objeto.resultado);
+        assertEquals(1, objeto.cambioNumeroI(1));
     }
 
     @Test
-    void cambioNumeroTest5() {
-        objeto.cambioNumero(23);
-        assertEquals(10111, objeto.resultado);
-    }
-
-
-    @Test
-    void binarioDecimalRTest1() {
-        objeto.binarioDecimalR(100);
-        assertEquals(4, objeto.resultado);
+    void cambioNumeroRTest1() {
+        assertEquals(1100, objeto.cambioNumeroR(12));
     }
 
     @Test
-    void binarioDecimalRTest2() {
-        objeto.binarioDecimalR(0);
-        assertEquals(0, objeto.resultado);
+    void cambioNumeroRTest2() {
+        assertEquals(101000, objeto.cambioNumeroR(40));
     }
 
     @Test
     void cambioNumeroRTest3() {
-        objeto.binarioDecimalR(1);
-        assertEquals(1, objeto.resultado);
+        assertEquals(0, objeto.cambioNumeroR(0));
     }
 
     @Test
     void cambioNumeroRTest4() {
-        objeto.binarioDecimalR(10001);
-        assertEquals(17, objeto.resultado);
+        assertEquals(1, objeto.cambioNumeroR(1));
     }
 
     @Test
-    void binarioDecimalLAmbdaTest1() {
-        objeto.cambioNumeroLambda(12);
-        assertEquals(1100, objeto.resultado);
-    }
-
-    @Test
-    void binarioDecimalLAmbdaTest2() {
-        objeto.cambioNumeroLambda(0);
-        assertEquals(0, objeto.resultado);
-    }
-
-    @Test
-    void binarioDecimalLAmbdaTest3() {
-        objeto.cambioNumeroLambda(1);
-        assertEquals(1, objeto.resultado);
-    }
-
-    @Test
-    void binarioDecimalLAmbdaTest4() {
-        objeto.cambioNumeroLambda(17);
-        assertEquals(10001, objeto.resultado);
-    }
-
+    void cambioNumeroTestRe() {
+        assertEquals(1100, objeto.cambioNumeroRe(12,0));
+    }   
 }

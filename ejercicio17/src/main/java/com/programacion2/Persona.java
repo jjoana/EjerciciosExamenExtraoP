@@ -42,5 +42,4 @@ public class Persona {
 }
 
 class MiExcepcion extends Exception {
-
 }

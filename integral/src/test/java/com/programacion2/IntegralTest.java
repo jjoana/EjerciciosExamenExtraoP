@@ -18,4 +18,18 @@ public class IntegralTest {
     void sumaNumeroRTest2(){
         assertEquals(58, objeto.integralEXCuadrado(0, 3, 1), 1);
     }
+
+    @Test
+    void sumaNumeroRTest3() {
+        assertEquals(0, objeto.integralEXCuadrado(0, 0, 1));
+    }
+
+    @Test
+    void sumaNumeroRTest4() {
+        assertEquals(3.71, objeto.integralEXCuadrado(0, 2, 1), 0.1);
+    }
+
+    
+
+
 }

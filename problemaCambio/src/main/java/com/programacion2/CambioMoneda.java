@@ -48,9 +48,7 @@ public class CambioMoneda {
                 }
             }
             return resultado;
-
         };
-         return interF.apply(cambio, sistemaMonedas);
-
+        return interF.apply(cambio, sistemaMonedas);
     }
 }

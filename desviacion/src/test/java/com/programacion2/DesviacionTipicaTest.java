@@ -13,41 +13,79 @@ public class DesviacionTipicaTest {
     DesviacionTipica objeto = new DesviacionTipica();
 
     @Test
-    void desviacionTipicaTestR() {
-        ArrayList<Double> elementosLista = new ArrayList<Double>();
-        elementosLista.add(3.0);
-        elementosLista.add(2.0);
-        elementosLista.add(1.0);
+    void mediaAritmeticaR1(){
+        ArrayList<Float> elementosLista = new ArrayList<Float>();
+        elementosLista.add(3f);
+        elementosLista.add(2f);
+        elementosLista.add(1f);
 
-        assertEquals(0.81, objeto.DesviacionTipicaR(3, elementosLista),0.1);
+        assertEquals(2.0, objeto.MediaAritmeticR(elementosLista), 0.1);
     }
 
     @Test
-    void desviacionTipicaTestR1() {
-        ArrayList<Double> elementosLista = new ArrayList<Double>();
-        elementosLista.add(0.0);
+    void mediaAritmeticaR2(){
+        ArrayList<Float> elementosLista = new ArrayList<Float>();
+        elementosLista.add(0f);
 
-        assertEquals(0.0, objeto.DesviacionTipicaR(1, elementosLista),0.1);
+        assertEquals(0.0, objeto.MediaAritmeticR(elementosLista), 0.1);
     }
 
     @Test
-    void desviacionTipicaTestR2() {
-        ArrayList<Double> elementosLista = new ArrayList<Double>();
-        elementosLista.add(1.0);
+    void mediaAritmeticaR3(){
+        ArrayList<Float> elementosLista = new ArrayList<Float>();
+        elementosLista.add(1f);
 
-        assertEquals(0.0, objeto.DesviacionTipicaR(1, elementosLista),0.1);
+        assertEquals(1.0, objeto.MediaAritmeticR(elementosLista), 0.1);
     }
 
     @Test
-    void desviacionTipicaTestR3() {
-        ArrayList<Double> elementosLista = new ArrayList<Double>();
-        elementosLista.add(6.0);
-        elementosLista.add(4.0);
-        elementosLista.add(2.0);
+    void desviacionTipica(){
+        ArrayList<Float> elementosLista = new ArrayList<Float>();
+        elementosLista.add(3f);
+        elementosLista.add(2f);
+        elementosLista.add(1f);
 
-        assertEquals(1.63, objeto.DesviacionTipicaR(3, elementosLista),0.1);
+        assertEquals(0.81, objeto.desviacionTipica(elementosLista), 0.1);
     }
 
+    @Test
+    void desviacionTipica2(){
+        ArrayList<Float> elementosLista = new ArrayList<Float>();
+        elementosLista.add(0f);
 
-    
+        assertEquals(0.0, objeto.desviacionTipica(elementosLista), 0.1);
+    }
+
+    @Test
+    void desviacionTipica3(){
+        ArrayList<Float> elementosLista = new ArrayList<Float>();
+        elementosLista.add(1f);
+
+        assertEquals(0.0, objeto.desviacionTipica(elementosLista), 0.1);
+    }
+
+    @Test
+    void mediaAritmeticaI(){
+        ArrayList<Float> elementosLista = new ArrayList<Float>();
+        elementosLista.add(3f);
+        elementosLista.add(2f);
+        elementosLista.add(1f);
+
+        assertEquals(2.0, objeto.MediaAritmeticI(3,elementosLista), 0.1);
+    }
+
+    @Test
+    void mediaAritmeticaI1(){
+        ArrayList<Float> elementosLista = new ArrayList<Float>();
+        elementosLista.add(1f);
+
+        assertEquals(1.0, objeto.MediaAritmeticI(1,elementosLista), 0.1);
+    }
+
+    @Test
+    void mediaAritmeticaI2(){
+        ArrayList<Float> elementosLista = new ArrayList<Float>();
+
+        assertEquals(0.0, objeto.MediaAritmeticI(1,elementosLista), 0.1);
+    }
 }

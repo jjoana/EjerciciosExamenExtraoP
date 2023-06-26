@@ -7,6 +7,8 @@ import java.io.IOException;
 import java.text.CollationElementIterator;
 import java.util.concurrent.TimeUnit;
 
+import javax.swing.text.html.parser.Element;
+
 public class App {
     public static void main(String[] args) {
 
@@ -81,8 +83,20 @@ class Tablero {
         int celdaEstadoActual;
         int celdaEstadoSiguiente;
         int celulasVivas;
+        int fila = 0;
+        int elemento;
+        while( fila < DIMENSION){
+            int columna = 0;
+            while (columna < DIMENSION){
+                if(elemento != 10 && elemento != 13){
+                        estadoActual[fila][columna] = elemento;
+                        columna++;
+                    }
+                }
+                fila++;
+            }
         
-    
+        
         celulasVivas = 0;
         if(estadoActual[0][1] == 1){
             celulasVivas ++;

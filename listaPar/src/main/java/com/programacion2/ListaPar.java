@@ -13,7 +13,7 @@ public class ListaPar {
     public void listaParR(int n) throws MiExcepcion {
         int elemento = n;
         if (elemento >= 2) {
-            if (elemento % 2 == 0 && n >= 2) {
+            if (elemento % 2 == 0) {
                 miLista.add(elemento);
                 listaParR(elemento - 1);
             } else {
@@ -32,10 +32,9 @@ public class ListaPar {
                 elemento--;
             }
         }
-
     }
 
-    public void listaParLambda(int n) {
+    public void listaParLambda(int n) throws MiExcepcion {
         Consumer<Integer> interF = (a) -> {
             int elemento = a;
             while (elemento>= 2) {

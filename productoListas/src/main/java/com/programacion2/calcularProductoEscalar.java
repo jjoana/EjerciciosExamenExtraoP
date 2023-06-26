@@ -43,5 +43,6 @@ public class calcularProductoEscalar {
             }
         };
         interF.accept(lista1, lista2);
+        System.out.println("Imprimeme el error");
     }
 }

@@ -17,7 +17,7 @@ public class SumaElementosPares {
     }
 
     public void sumaParesI(List<Integer> lista) {
-        while (!lista.isEmpty()) {
+        while (! lista.isEmpty()) {
             if (lista.get(0) > 0) {
                 resultado += lista.get(0);
                 lista.remove(0);

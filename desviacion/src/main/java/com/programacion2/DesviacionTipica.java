@@ -3,43 +3,60 @@ package com.programacion2;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.sound.midi.MidiChannel;
+
 public class DesviacionTipica {
 
-
-
-    public double mediaAritmeticaR(int tamano, List<Double> miLista) {
-        double valor = 0;
-
-        if (!miLista.isEmpty()) {
-            valor = miLista.get(0) / tamano;
-            miLista.remove(0);
-            if (tamano > 1) {
-                valor += mediaAritmeticaR(tamano, miLista);
-            }
-        }
-        return valor;
+    private double tamano(List<Float> miLista) {
+        return miLista.size();
     }
-    
-    private double desviacionTipicaR(List<Double> miLista, int tamano, double media){
-        double resultado = 0;
-        double valor = 0;
 
-        if(!miLista.isEmpty()){
-            valor = miLista.get(0);
+    public float MediaAritmeticI(double tamanoLista, List<Float> miLista) {
+        float resultado = 0;
+        while (!miLista.isEmpty()) {
+            resultado += miLista.get(0) / tamanoLista;
             miLista.remove(0);
-            resultado += Math.pow((valor - media),2)/ tamano + desviacionTipicaR(miLista, tamano, media);
         }
         return resultado;
     }
 
-    public double DesviacionTipicaR(int tamano, List<Double> miLista){
+    private float MediaAritmeticR(double tamanoLista, List<Float> miLista) {
+        float resultado = 0f;
+        if (!miLista.isEmpty()) {
+            double valor = miLista.get(0) / tamanoLista;
+            miLista.remove(0);
+            resultado += valor + MediaAritmeticR(tamanoLista, miLista);
+        }
+        return resultado;
+    }
 
-        ArrayList<Double> copiaLista = new ArrayList<>(miLista);
-        double media = mediaAritmeticaR(tamano, copiaLista);
+    private float desviacionTipica(double tamanoLista, List<Float> miLista, float media) {
+        float resultado = 0f;
+        if (!miLista.isEmpty()) {
+            float valor = (float) ((float) Math.pow((double) (miLista.get(0) - media), 2.0) / tamanoLista);
+            miLista.remove(0);
+            resultado += valor + desviacionTipica(tamanoLista, miLista, media);
+        }
+        return resultado;
+    }
 
+    public float desviacionTipica(List<Float> miLista) {
+
+        double tamanoLista = tamano(miLista);
+
+        ArrayList<Float> copiaLista = new ArrayList<Float>();
         copiaLista = new ArrayList<>(miLista);
-        double intermedio = desviacionTipicaR(copiaLista, tamano, media);
-        double desviacion = Math.sqrt(intermedio);
-        return desviacion;
+        float media = MediaAritmeticR(tamanoLista, copiaLista);
+
+        float desviacionSinRaiz = desviacionTipica(tamanoLista, miLista, media);
+        float resultado = (float) Math.sqrt(desviacionSinRaiz);
+        return resultado;
+    }
+
+    public float MediaAritmeticR(List<Float> miLista) {
+        double tamanoLista = tamano(miLista);
+
+        float media = MediaAritmeticR(tamanoLista, miLista);
+        return media;
     }
 }

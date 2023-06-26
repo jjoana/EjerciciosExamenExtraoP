@@ -7,7 +7,7 @@ import java.util.function.BiFunction;
 import java.util.function.Function;
 
 public class MediaAritmetica {
-
+    
     List<Double> lista = new ArrayList<Double>();
 
     public double mediaAritmeticaR(int tamano, List<Double> miLista) {

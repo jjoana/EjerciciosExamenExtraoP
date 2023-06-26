@@ -20,6 +20,7 @@ public class SumaNumeros {
     public void sumaIterativa(List<Integer> miLista) {
         for (int i = 0; i < miLista.size(); i++) {
             resultado += miLista.get(i);
+
         }
     }
 

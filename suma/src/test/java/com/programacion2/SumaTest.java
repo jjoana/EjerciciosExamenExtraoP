@@ -30,9 +30,15 @@ public class SumaTest {
     void sumaIterativoTest() throws MiExcepcion{
         assertEquals(0, objeto.sumaNumeroI(0));
     }
+
+    @Test
+    void sumaIterativ2Test() throws MiExcepcion{
+        assertEquals(1, objeto.sumaNumeroI(1));
+    }
     
     @Test
     void SumaLambdaTest() {
         assertEquals(10, objeto.sumaNumeroLambda(4));
     }
+
 }

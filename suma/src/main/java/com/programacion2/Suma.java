@@ -10,7 +10,7 @@ public class Suma {
         if (n == 0) {
             return 0;
         } else if (n > 0) {
-            n += sumaNumeroR(n - 1);
+            n += sumaNumeroR(n -1);
         }
         return n;
     }
@@ -38,7 +38,6 @@ public class Suma {
         };
         return (interF.apply(n));
     }
-
 }
 
 @FunctionalInterface

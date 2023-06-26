@@ -35,11 +35,47 @@ public class HexaToBinarioTest {
         objeto.hexadecimalToBinarioI("FE05");
         assertEquals(65029, objeto.resultado);
     }
+
+    @Test
+    void HexaToDeciTest4(){
+        objeto.hexadecimalToBinarioI("0");
+        assertEquals(0, objeto.resultado);
+    }
     
 
     @Test
     void DecimalToBinario(){
+        objeto.DecimalToBinarioR(0);
+        assertEquals(0, objeto.resultado);
+    }
+
+    @Test
+    void DecimalToBinario1(){
         objeto.DecimalToBinarioR(19);
         assertEquals(10011, objeto.resultado);
+    }
+
+    @Test
+    void DecimalToBinario2(){
+        objeto.DecimalToBinarioR(20);
+        assertEquals(10100, objeto.resultado);
+    }
+
+    @Test
+    void DecimalToBinario3(){
+        objeto.DecimalToBinarioR(100);
+        assertEquals(1100100, objeto.resultado);
+    }
+
+    @Test
+    void DecimalToHexaTest() {
+        objeto.DecimalToHexa(19);
+        assertEquals("013", objeto.resultado);
+    }
+
+    @Test
+    void DecimalToHexaTest2(){
+        objeto.DecimalToHexa(418);
+        assertEquals("01A2", objeto.resultado);
     }
 }

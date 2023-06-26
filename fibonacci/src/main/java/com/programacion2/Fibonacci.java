@@ -32,7 +32,6 @@ public class Fibonacci {
                 antepenultimo = penultimo;
                 penultimo = resultado;
             }
-
         }
         return resultado;
 
