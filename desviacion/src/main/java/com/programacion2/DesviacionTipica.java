@@ -21,11 +21,11 @@ public class DesviacionTipica {
     }
 
     private float MediaAritmeticR(double tamanoLista, List<Float> miLista) {
-        float resultado = 0f;
-        if (!miLista.isEmpty()) {
-            double valor = miLista.get(0) / tamanoLista;
+        float resultado = 0;
+        while(!miLista.isEmpty()){
+            resultado += miLista.get(0) / tamanoLista;
             miLista.remove(0);
-            resultado += valor + MediaAritmeticR(tamanoLista, miLista);
+            MediaAritmeticR(tamanoLista, miLista);
         }
         return resultado;
     }
@@ -41,7 +41,6 @@ public class DesviacionTipica {
     }
 
     public float desviacionTipica(List<Float> miLista) {
-
         double tamanoLista = tamano(miLista);
 
         ArrayList<Float> copiaLista = new ArrayList<Float>();

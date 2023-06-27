@@ -38,7 +38,6 @@ public class ObtenerListaPar {
                 miLista.remove(0);
             }
         }
-
     }
 
     public void obtenerListaParLambda(ArrayList<Integer> miLista) {

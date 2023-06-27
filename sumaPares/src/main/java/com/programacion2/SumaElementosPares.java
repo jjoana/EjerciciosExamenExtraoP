@@ -9,15 +9,20 @@ public class SumaElementosPares {
 
     public void sumaParesR(List<Integer> lista) {
         if (!lista.isEmpty()) {
-            resultado += lista.get(0);
-            lista.remove(0);
-            sumaParesR(lista);
+            if (lista.get(0) % 2 == 0) {
+                resultado += lista.get(0);
+                lista.remove(0);
+                sumaParesR(lista);
+            } else {
+                lista.remove(0);
+                sumaParesR(lista);
+            }
         }
 
     }
 
     public void sumaParesI(List<Integer> lista) {
-        while (! lista.isEmpty()) {
+        while (!lista.isEmpty()) {
             if (lista.get(0) > 0) {
                 resultado += lista.get(0);
                 lista.remove(0);

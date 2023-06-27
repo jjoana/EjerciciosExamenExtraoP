@@ -19,7 +19,7 @@ public class SumaElementosParesTest {
         miLista.add(2);
         miLista.add(1);
         objeto.sumaParesR(miLista);
-        assertEquals(6, objeto.resultado);
+        assertEquals(2, objeto.resultado);
     }
 
     @Test
